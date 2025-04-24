@@ -1,0 +1,63 @@
+# --- Node.js / npm ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# --- PHP / Composer ---
+vendor/
+composer.lock
+
+# --- .env-Dateien (z. B. API-Schlüssel, SMTP-Daten etc.) ---
+.env
+.env.local
+.env.*.local
+
+# --- Konfigurationsdateien mit sensiblen Daten (selbst benennen) ---
+config.php
+config/*.php
+backend/api/config.php
+backend/config/*.php
+
+# --- Logfiles / temporäre Daten ---
+*.log
+logs/
+storage/
+*.cache
+
+# --- Backup-Dateien ---
+*.bak
+*.tmp
+*.swp
+*~
+
+# --- Datenbanken / SQLite-Dateien ---
+*.sqlite
+*.db
+
+# --- IDE / Editor-Dateien ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Systemdateien ---
+.DS_Store
+Thumbs.db
+
+# --- Exportierte Daten / generierte Dateien ---
+*.pdf
+*.csv
+*.zip
+*.tar.gz
+
+# --- Tests und Coverage (falls vorhanden) ---
+coverage/
+.phpunit.result.cache
+
+# --- Git-Ordner selbst absichern ---
+.git/
+
+# --- Optional: .htaccess ausschließen, wenn vertraulich ---
+.htaccess
