@@ -1,0 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("mietvertrag-form");
+  const danke = document.getElementById("mietvertrag-danke");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch("/backend/api/mietvertrag.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        form.style.display = "none";
+        danke.style.display = "block";
+      } else {
+        alert("Fehler: " + (data.message || "Bitte versuche es erneut."));
+      }
+    })
+    .catch(error => {
+      console.error("Fehler beim Senden:", error);
+      alert("Fehler beim Senden des Formulars.");
+    });
+  });
+});
