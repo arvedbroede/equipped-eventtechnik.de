@@ -14,6 +14,7 @@ composer.lock
 .env
 .env.local
 .env.*.local
+.env.*
 
 # --- Konfigurationsdateien mit sensiblen Daten (selbst benennen) ---
 config.php
@@ -37,6 +38,10 @@ storage/
 *.sqlite
 *.db
 
+# --- SQL-Dumps (z. B. manuelle DB-Backups) ---
+*.sql
+*.sql.gz
+
 # --- IDE / Editor-Dateien ---
 .vscode/
 .idea/
@@ -55,9 +60,6 @@ Thumbs.db
 # --- Tests und Coverage (falls vorhanden) ---
 coverage/
 .phpunit.result.cache
-
-# --- Git-Ordner selbst absichern ---
-.git/
 
 # --- Optional: .htaccess ausschließen, wenn vertraulich ---
 .htaccess
