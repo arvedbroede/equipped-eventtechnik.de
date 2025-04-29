@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mietvertrag – Equipped! Eventtechnik</title>
+  <style>
+    body {
+      font-family: DejaVu Sans, sans-serif;
+      font-size: 12px;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #0a0c27;
+    }
+    ul {
+      margin-top: 0;
+    }
+    .section {
+      margin-top: 1.5rem;
+    }
+    .signature {
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Mietvertrag für bewegliche Gegenstände</h1>
+<p>Dieser Mietvertrag regelt die Mietbedingungen für Veranstaltungstechnik.</p>
+
+<p><strong>Vermieter:</strong><br>
+Equipped! Eventtechnik GbR<br>
+Arved Bröde, Aaron Bröde<br>
+Danziger Straße 28, 71679 Asperg<br>
+Mobil: 0157 585 089 36<br>
+E-Mail: hello@equipped-eventtechnik.de<br>
+Website: www.equipped-eventtechnik.de</p>
+
+<p><strong>Mieter:</strong><br>
+{{mieter_name}}<br>
+{{adresse}}<br>
+Mobil: {{telefon}}<br>
+E-Mail: {{email}}</p>
+
+<div class="section">
+<h2>§1 Mietgegenstände</h2>
+<p>Folgende Geräte und Zubehörteile sind Gegenstand der Vermietung:</p>
+{{bundle_items}}
+</div>
+
+<div class="section">
+<h2>§2 Mietzeit</h2>
+<p>Von: {{mietbeginn}}<br>Bis: {{mietende}}</p>
+</div>
+
+<div class="section">
+<h2>§3 Kosten</h2>
+<p>Der Mietpreis, die Kaution und mögliche Nebenkosten richten sich nach dem vereinbarten Angebot.</p>
+</div>
+
+<div class="section">
+<h2>§4 Pflichten des Mieters</h2>
+<ul>
+<li>Sorgfältiger Umgang & sachgemäße Nutzung</li>
+<li>Rückgabe in sauberem und funktionstüchtigem Zustand</li>
+<li>Verbot der Untervermietung</li>
+<li>Meldepflicht bei Schäden</li>
+<li>Haftung bei Beschädigung, Verlust oder verspäteter Rückgabe</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>§5 Übergabe und Rückgabe</h2>
+<p>Übergabe und Rückgabe erfolgen dokumentiert mit einem Übergabeprotokoll.</p>
+</div>
+
+<div class="section">
+<h2>§6 Haftung</h2>
+<p>Der Mieter haftet für alle Schäden während der Mietdauer. Der Vermieter haftet nur bei Vorsatz oder grober Fahrlässigkeit.</p>
+</div>
+
+<div class="section">
+<h2>§7 Datenschutz</h2>
+<p>Die übermittelten personenbezogenen Daten werden ausschließlich zur Abwicklung des Mietverhältnisses verarbeitet.</p>
+</div>
+
+<div class="section">
+<h2>§8 Sonstiges</h2>
+<p>{{nachricht}}</p>
+</div>
+
+<div class="section">
+<p>Vertrag erstellt am: {{erstell_datum}}</p>
+<p>Mit der Unterschrift bestätigen beide Parteien die Gültigkeit dieses Vertrags.</p>
+</div>
+
+<div class="signature">
+<p>__________________________<br>Unterschrift Mieter</p>
+<p>__________________________<br>Unterschrift Vermieter</p>
+</div>
+
+</body>
+</html>

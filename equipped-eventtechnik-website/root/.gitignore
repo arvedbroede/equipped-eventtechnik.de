@@ -1,0 +1,14 @@
+# Ignoriere .htaccess-Dateien
+.htaccess
+
+# Ignoriere .env-Dateien
+.env
+
+# Ignoriere alle .config.php-Dateien überall im Projekt
+*.config.php
+
+# Falls du zusätzlich alle ".env"-Varianten ignorieren möchtest (z. B. .env.local, .env.production)
+.env.*
+
+# Optional: Kommentare (wird von Git ignoriert)
+# Weitere sensible Dateien kannst du hier ergänzen

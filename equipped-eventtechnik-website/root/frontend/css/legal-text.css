@@ -1,0 +1,31 @@
+/* Allgemeiner Container für rechtliche Texte (z. B. Datenschutz, Impressum) */
+.legal-text {
+    background: #0a0c27;
+    color: #fff;
+    padding: 80px 20px;
+  }
+  
+  /* Hauptüberschrift innerhalb rechtlicher Seiten */
+  .legal-text h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #00ffc2;
+  }
+  
+  /* Stil für den eigentlichen rechtlichen Textbereich */
+  .itrk-legaltext {
+    background: #1d1f4a;
+    padding: 30px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Links im Rechtstext */
+  .itrk-legaltext a {
+    color: #85e5f8;
+    text-decoration: underline;
+  }
+  

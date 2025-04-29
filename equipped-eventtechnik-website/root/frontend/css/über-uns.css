@@ -1,0 +1,65 @@
+/* Über-uns-Sektion */
+.ueberuns {
+    background: #0a0c27;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  /* Hauptüberschrift */
+  .ueberuns h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Container für Bild und Text */
+  .ueberuns-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Teamfoto-Styling */
+  .teamfoto {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.4);
+    object-fit: cover;
+  }
+  
+  /* Textblock */
+  .ueberuns-text {
+    text-align: left;
+    max-width: 700px;
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+  
+  /* Hervorhebungen im Text */
+  .ueberuns-text .highlight {
+    color: #00ffc2;
+    font-weight: 600;
+  }
+  
+  /* Responsive: nebeneinander ab Tablet-Breite */
+  @media (min-width: 768px) {
+    .ueberuns-wrapper {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .teamfoto {
+      margin-right: 40px;
+    }
+  
+    .ueberuns-text {
+      margin-top: 0;
+    }
+  }
+  
