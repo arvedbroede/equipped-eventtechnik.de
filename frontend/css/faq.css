@@ -1,0 +1,1 @@
+.faq-item{border-bottom:1px solid #444;padding:1rem 0}.faq-question{background:none;border:none;font-size:1.1rem;font-weight:700;color:#85e5f8;cursor:pointer;width:100%;text-align:left}.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;opacity:0;padding-left:.5rem}.faq-item.open .faq-answer{max-height:500px;opacity:1;margin-top:.5rem}

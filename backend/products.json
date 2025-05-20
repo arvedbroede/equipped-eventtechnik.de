@@ -1,0 +1,92 @@
+[
+    {
+      "id": "sony-gtk-xb72",
+      "name": "Sony GTK-XB72",
+      "category": "Ton",
+      "price": 15,
+      "maxQuantity": 2,
+      "image": "frontend/img/products/sony_gtk_xb72.jpg",
+      "description": "Leistungsstarker Partylautsprecher mit EXTRA BASS."
+    },
+    {
+      "id": "hk-c152",
+      "name": "Hughes & Kettner C152 Lautsprecher",
+      "category": "Ton",
+      "price": 15,
+      "maxQuantity": 2,
+      "image": "frontend/img/products/hk_c152.jpg",
+      "description": "Kompakter Lautsprecher für klare Klangwiedergabe."
+    },
+    {
+      "id": "magnum-subwoofer",
+      "name": "Magnum Standard Subwoofer",
+      "category": "Ton",
+      "price": 20,
+      "maxQuantity": 2,
+      "image": "frontend/img/products/magnum_subwoofer.jpg",
+      "description": "Sorgt für den nötigen Bass auf deiner Veranstaltung."
+    },
+    {
+      "id": "mixars-primo",
+      "name": "Mixars Primo DJ-Controller",
+      "category": "Ton",
+      "price": 20,
+      "maxQuantity": 1,
+      "image": "frontend/img/products/mixars_primo.jpg",
+      "description": "Professioneller 2-Kanal DJ-Controller für Serato DJ Pro."
+    },
+    {
+      "id": "tmix-1202",
+      "name": "the t.mix xmix 1202 FXMP USB",
+      "category": "Ton",
+      "price": 10,
+      "maxQuantity": 1,
+      "image": "frontend/img/products/tmix_1202.jpg",
+      "description": "Kompaktes Mischpult mit Effekten und USB-Interface."
+    },
+    {
+      "id": "aokeo-mikrofon",
+      "name": "Aokeo Mikrofon",
+      "category": "Ton",
+      "price": 5,
+      "maxQuantity": 3,
+      "image": "frontend/img/products/aokeo_mikrofon.jpg",
+      "description": "Vielseitiges Mikrofon für Sprache und Gesang."
+    },
+    {
+      "id": "stairville-clb4",
+      "name": "Stairville CLB4 RGB Compact LED Bar 4",
+      "category": "Licht",
+      "price": 25,
+      "maxQuantity": 1,
+      "image": "frontend/img/products/stairville_clb4.jpg",
+      "description": "Kompakte LED-Bar für farbenfrohe Beleuchtung."
+    },
+    {
+      "id": "superlux-ms108e",
+      "name": "Superlux MS-108E Mikrofonstativ",
+      "category": "Zubehör",
+      "price": 3,
+      "maxQuantity": 2,
+      "image": "frontend/img/products/superlux_ms108e.jpg",
+      "description": "Stabiles Mikrofonstativ mit Galgen."
+    },
+    {
+      "id": "accu-stand-table",
+      "name": "Accu Stand Pro Event Table 2",
+      "category": "Zubehör",
+      "price": 10,
+      "maxQuantity": 1,
+      "image": "frontend/img/products/accu_stand_table.jpg",
+      "description": "Professioneller DJ-Tisch, klappbar."
+    },
+    {
+      "id": "millenium-laptopstand",
+      "name": "Millenium Laptopstand White",
+      "category": "Zubehör",
+      "price": 2,
+      "maxQuantity": 1,
+      "image": "frontend/img/products/millenium_laptopstand.jpg",
+      "description": "Praktischer Laptopständer für DJs und Musiker."
+    }
+  ]

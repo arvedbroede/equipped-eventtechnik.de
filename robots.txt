@@ -1,0 +1,26 @@
+User-agent: *
+
+Sitemap: https://equipped-eventtechnik.de/sitemap.xml
+
+# Interne Ordner / Dateien, die nicht indexiert werden sollen
+Disallow: /backend/
+Disallow: /private/
+Disallow: /backups/
+Disallow: /vendor/
+Disallow: /frontend/template/
+
+# Einzeldateien / JSON / Config
+Disallow: /bundles.json
+Disallow: /config.php
+
+# Mietvertrag-Seite nicht indexieren
+Disallow: /mietvertrag
+
+# Optional: bei Rewrite
+# Disallow: /mietvertrag.php
+
+# Unerwünschte Dateitypen sperren
+Disallow: /*.env$
+Disallow: /*.lock$
+Disallow: /*.md$
+Disallow: /*.log$

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Startseite -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- AGB -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/agb</loc>
+    <priority>0.4</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Bundles -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/bundles</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Datenschutz -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/datenschutz</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Equipment -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/equipment</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/faq</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Impressum -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/impressum</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Kontakt -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/kontakt</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Über uns -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/über-uns</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Bundle-Konfigurator -->
+  <url>
+    <loc>https://equipped-eventtechnik.de/bundle-konfigurator</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
