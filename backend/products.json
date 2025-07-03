@@ -5,7 +5,7 @@
       "category": "Ton",
       "price": 15,
       "maxQuantity": 2,
-      "image": "frontend/img/products/sony_gtk_xb72.jpg",
+      "image": "frontend/img/products/Sony GTK-XB 72 - Trans BG.svg",
       "description": "Leistungsstarker Partylautsprecher mit EXTRA BASS."
     },
     {
@@ -14,7 +14,7 @@
       "category": "Ton",
       "price": 15,
       "maxQuantity": 2,
-      "image": "frontend/img/products/hk_c152.jpg",
+      "image": "frontend/img/products/Hughes & Kettner - Trans BG.svg",
       "description": "Kompakter Lautsprecher für klare Klangwiedergabe."
     },
     {
@@ -23,7 +23,7 @@
       "category": "Ton",
       "price": 20,
       "maxQuantity": 2,
-      "image": "frontend/img/products/magnum_subwoofer.jpg",
+      "image": "frontend/img/products/Magnum Standard - Trans BG.svg",
       "description": "Sorgt für den nötigen Bass auf deiner Veranstaltung."
     },
     {
@@ -32,7 +32,7 @@
       "category": "Ton",
       "price": 20,
       "maxQuantity": 1,
-      "image": "frontend/img/products/mixars_primo.jpg",
+      "image": "frontend/img/products/Mixars Primo - Trans BG.svg",
       "description": "Professioneller 2-Kanal DJ-Controller für Serato DJ Pro."
     },
     {
@@ -41,7 +41,7 @@
       "category": "Ton",
       "price": 10,
       "maxQuantity": 1,
-      "image": "frontend/img/products/tmix_1202.jpg",
+      "image": "frontend/img/products/the t.mix xmix 1202 FXMP USB - Trans BG.svg",
       "description": "Kompaktes Mischpult mit Effekten und USB-Interface."
     },
     {
@@ -50,7 +50,7 @@
       "category": "Ton",
       "price": 5,
       "maxQuantity": 3,
-      "image": "frontend/img/products/aokeo_mikrofon.jpg",
+      "image": "frontend/img/products/AOKEO Professional 350 - Trans BG.svg",
       "description": "Vielseitiges Mikrofon für Sprache und Gesang."
     },
     {
@@ -59,7 +59,7 @@
       "category": "Licht",
       "price": 25,
       "maxQuantity": 1,
-      "image": "frontend/img/products/stairville_clb4.jpg",
+      "image": "frontend/img/products/Stairville CLB4 RGB Compact LED Bar 4 - Trans BG.svg",
       "description": "Kompakte LED-Bar für farbenfrohe Beleuchtung."
     },
     {
@@ -68,7 +68,7 @@
       "category": "Zubehör",
       "price": 3,
       "maxQuantity": 2,
-      "image": "frontend/img/products/superlux_ms108e.jpg",
+      "image": "frontend/img/products/Superlux MS-108E - Trans BG.svg",
       "description": "Stabiles Mikrofonstativ mit Galgen."
     },
     {
@@ -77,7 +77,7 @@
       "category": "Zubehör",
       "price": 10,
       "maxQuantity": 1,
-      "image": "frontend/img/products/accu_stand_table.jpg",
+      "image": "frontend/img/products/Accu Stand Pro Event Table 2 - Trans BG.svg",
       "description": "Professioneller DJ-Tisch, klappbar."
     },
     {
@@ -86,7 +86,7 @@
       "category": "Zubehör",
       "price": 2,
       "maxQuantity": 1,
-      "image": "frontend/img/products/millenium_laptopstand.jpg",
+      "image": "frontend/img/products/Millenium Laptopstand White - Trans BG.svg",
       "description": "Praktischer Laptopständer für DJs und Musiker."
     }
   ]

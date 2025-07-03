@@ -1,0 +1,674 @@
+/* Globale Resets und Basiseinstellungen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0c27;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Allgemeine Textzentrierung für Sektionen mit flexiblen Inhalten */
+/* Diese Regel zentriert text-basierte Inhalte. Für Block-Elemente, die nicht volle Breite einnehmen,
+   ist oft Flexbox oder margin: auto auf dem Element selbst besser. */
+.about,
+.anfrage,
+.bundles-preview,
+.card,
+.footer-bottom,
+.hero,
+.toast-success {
+  text-align: center;
+}
+
+/* Gemeinsame Link-Stile für Navigationen */
+.mobile-nav a,
+header nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Allgemeine Cursor-Einstellung für interaktive Elemente */
+.btn,
+.burger,
+.close-btn {
+  cursor: pointer;
+}
+
+/* Liste ohne Punkte für Navigationen und Footer */
+.footer-column ul,
+.mobile-nav ul,
+header nav ul,
+.card .bundle-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Container Basis-Stile - zentriert den Container selbst auf der Seite */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  /* text-align: center; wird hier nicht global gesetzt, um Konflikte zu vermeiden.
+     Stattdessen wird es selektiv dort angewendet, wo es nötig ist (z.B. .hero .container).
+     Für Block-Elemente im Container nutzen wir Flexbox. */
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+/* Flexbox für den Header-Container zur Anordnung von Logo und Navigation */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Burger Icon & Mobile Navigation */
+.burger {
+  display: none; /* Standardmäßig ausgeblendet auf größeren Bildschirmen */
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  z-index: 1001;
+  flex-direction: column;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.mobile-nav {
+  display: flex; /* Standardanzeige für mobile Nav */
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 8px rgb(0 0 0 / 0.2);
+  padding: 60px 25px 30px;
+  transition: right 0.3s;
+  z-index: 1000;
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.mobile-nav a {
+  font-size: 1.1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 1.8rem;
+  color: #000;
+  z-index: 1002;
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 0.3);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 900;
+  transition: opacity 0.3s;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Header Navigation (Desktop) */
+header nav a {
+  position: relative;
+  transition: color 0.3s;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #85e5f8;
+  transition: width 0.3s;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.hero img.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.5);
+}
+
+/* Zentriert den Inhalt des Hero-Containers */
+.hero .container {
+  position: relative;
+  z-index: 1;
+  text-align: center; /* Hier beibehalten, um den Text und den Button im Hero zu zentrieren */
+}
+
+/* Wenn .hero::after ein Overlay sein soll, braucht es eine background-color */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* background: rgba(0, 0, 0, 0.3); /* Beispiel für ein Overlay */
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* Buttons */
+.btn,
+.btn-small {
+  color: #0a0c27;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+
+.btn {
+  background: #00ffc2;
+  padding: 14px 28px;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.btn-small {
+  background: #00ffc2;
+  padding: 10px 24px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+/* Hover-Effekte für Buttons */
+.btn:hover,
+.card-btn:hover {
+  background: #85e5f8;
+}
+
+.anfrage-form .btn:hover,
+.btn-small:hover {
+  background: #85e5f8; /* Duplizierung des Hintergrunds für Übersichtlichkeit beibehalten */
+  transform: translateY(-2px);
+}
+
+/* About Section */
+.about {
+  background: #000;
+  padding: 80px 20px;
+}
+
+.about h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ccc;
+  font-size: 1.05rem;
+}
+
+/* Bundles Preview Section */
+.bundles-preview {
+  background-color: #0a0c27;
+  padding: 80px 20px;
+}
+
+.bundles-preview h3 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.bundle-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.45);
+}
+
+.card .bundle-img {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #fff;
+  margin-bottom: 18px;
+}
+
+.card h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0a0c27;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #00ffc2;
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+.card .bundle-list {
+  list-style-type: none;
+  margin: 10px 0 0;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+}
+
+.card .bundle-list li {
+  list-style-type: none;
+  font-size: 0.95rem;
+  color: #0a0c27;
+  padding-left: 20px;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.card-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+}
+
+.card-bottom span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0a0c27;
+}
+
+.card-btn {
+  background: #00ffc2;
+  color: #0a0c27;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+/* Anfrage Section (Formular) */
+.anfrage {
+  background: #0a0c27;
+  padding: 80px 20px;
+}
+
+.anfrage h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.anfrage-sub {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.anfrage-form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px 25px;
+  align-items: end;
+  padding-bottom: 40px;
+}
+
+.anfrage-form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.anfrage-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.anfrage-form input,
+.anfrage-form select,
+.anfrage-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fdfdfd;
+  resize: vertical;
+  color: #000;
+}
+
+.anfrage-form input:focus,
+.anfrage-form select:focus,
+.anfrage-form textarea:focus {
+  border-color: #00ffc2;
+  outline: 0;
+  background: #fff;
+}
+
+.anfrage-form .btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 10px;
+  padding: 14px 30px; /* Spezifisches Padding für diesen Button */
+  /* Die anderen Eigenschaften (background, color, border-radius, font-weight, border, cursor, transition)
+     werden von der allgemeinen .btn-Regel geerbt oder sind dort konsolidiert. */
+}
+
+#anfrage-danke {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f4f4f4;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+}
+
+/* Teaser Bundle Section - Hier ist die Zentrierung für den Inhalt! */
+.teaser-bundle {
+  padding: 80px 20px;
+  /* Hier keine direkten Zentrierungs-Eigenschaften für die Section selbst,
+     da der Inhalt im .container darin zentriert wird. */
+}
+
+/* Flexbox für den Container innerhalb der teaser-bundle Section */
+/* Dies zentriert die h2, p und den Button horizontal in der Mitte des Containers. */
+.teaser-bundle .container {
+  display: flex;
+  flex-direction: column; /* Elemente bleiben untereinander */
+  align-items: center;   /* Horizontal zentriert bei flex-direction: column */
+  /* Zusätzliche Regel, um sicherzustellen, dass text-align: center auch auf Inline-Inhalt wirkt,
+     falls dieser nicht direkt von align-items betroffen ist (z.B. reiner Textknoten). */
+  text-align: center;
+}
+
+
+/* Footer */
+.site-footer {
+  background: #fff;
+  color: #0a0c27;
+  padding: 60px 20px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  color: #000;
+}
+
+.footer-column ul li a {
+  color: #0a0c27;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-column ul li a:hover,
+.social-icons a:hover {
+  color: #00ffc2;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 1.1rem;
+  color: #0a0c27;
+  transition: color 0.2s;
+}
+
+.payment-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.payment-logos i,
+.payment-logos img {
+  font-size: 28px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: inline-block;
+  color: #0a0c27;
+}
+
+.payment-logos .bar-zahlung {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-left: 8px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Toast Success Message */
+.toast-success {
+  background-color: #00ffc2;
+  color: #0a0c27;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  animation: 5s ease-in-out fadeInOut;
+}
+
+/* DSGVO Checkbox Link */
+.checkbox-label a {
+  color: #00ffc2;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.checkbox-label a:hover {
+  color: #0a0c27;
+}
+
+/* Sticky CTA Mobile */
+.sticky-cta-mobile {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #85e5f8;
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  animation: popIn 0.5s ease-out;
+}
+
+.sticky-cta-mobile a {
+  color: #0a0c27;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+/* Keyframes */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body.menu-open .burger,
+  header nav ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobile-nav.open ~ .burger {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  header nav ul {
+    display: flex !important;
+    gap: 20px;
+  }
+
+  .burger,
+  .mobile-nav,
+  .mobile-overlay {
+    display: none !important;
+  }
+}

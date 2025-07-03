@@ -656,19 +656,19 @@ header nav a:hover::after {
   }
 
   .mobile-nav.open ~ .burger {
-    display: none !important;
+    display: none; /* !important entfernt */
   }
 }
 
 @media (min-width: 769px) {
   header nav ul {
-    display: flex !important;
+    display: flex; /* !important entfernt */
     gap: 20px;
   }
 
   .burger,
   .mobile-nav,
   .mobile-overlay {
-    display: none !important;
+    display: none; /* !important entfernt */
   }
 }
