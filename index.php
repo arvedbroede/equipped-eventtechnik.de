@@ -51,14 +51,17 @@
         <img src="frontend/img/products/prod.img.stereobundle.svg" alt="Stereo Bundle mit zwei Lautsprechern und Audiokabel" class="bundle-img" title="Stereo Bundle">
         <h4>Stereo Bundle</h4>
         <p>Massiver Sound.</p>
-        <ul class="bundle-list">
-          <li>2x Sony GTK-XB72</li>
-          <li>EXTRA BASS™</li>
-          <li>Bluetooth, Line In</li>
-          <li>Sony | Music Center App</li>
-          <li>Integrierte Lichteffekte</li>
-          <li>Verbinden gleicher Lautsprecher per Bluetooth®</li>
-        </ul>
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="stereo-bundle-details-index">Details anzeigen <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content" id="stereo-bundle-details-index">
+          <ul class="bundle-list">
+            <li>2x Sony GTK-XB72</li>
+            <li>EXTRA BASS™</li>
+            <li>Bluetooth, Line In</li>
+            <li>Sony | Music Center App</li>
+            <li>Integrierte Lichteffekte</li>
+            <li>Verbinden gleicher Lautsprecher per Bluetooth®</li>
+          </ul>
+        </div>
         <div class="card-bottom">
           <span>40 € / 24h</span>
           <a href="#anfrage" class="card-btn">Jetzt sichern</a>
@@ -68,16 +71,19 @@
         <img src="frontend/img/products/prod.img.partybundle.svg" alt="Party Bundle mit Lichtleiste und Lautsprechern" class="bundle-img" title="Party Bundle">
         <h4>Party Bundle</h4>
         <p>Massiver Sound und buntes Licht.</p>
-        <ul class="bundle-list">
-          <li>2x Sony GTK-XB72</li>
-          <li>EXTRA BASS™</li>
-          <li>Bluetooth, Line In</li>
-          <li>Sony | Music Center App</li>
-          <li>Integrierte Lichteffekte</li>
-          <li>Verbinden gleicher Lautsprecher per Bluetooth®</li>
-          <li>Stairville CLB4 RGB Compact LED Bar 4</li>
-          <li>Sound-to-Light Funktion</li>
-        </ul>
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="party-bundle-details-index">Details anzeigen <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content" id="party-bundle-details-index">
+          <ul class="bundle-list">
+            <li>2x Sony GTK-XB72</li>
+            <li>EXTRA BASS™</li>
+            <li>Bluetooth, Line In</li>
+            <li>Sony | Music Center App</li>
+            <li>Integrierte Lichteffekte</li>
+            <li>Verbinden gleicher Lautsprecher per Bluetooth®</li>
+            <li>Stairville CLB4 RGB Compact LED Bar 4</li>
+            <li>Sound-to-Light Funktion</li>
+          </ul>
+        </div>
         <div class="card-bottom">
           <span>50 € / 24h</span>
           <a href="#anfrage" class="card-btn">Jetzt sichern</a>
@@ -87,18 +93,21 @@
         <img src="frontend/img/products/prod.img.djbumdle.trans.svg" alt="DJ Bundle mit Mischpult, Licht und Lautsprechern" class="bundle-img" title="DJ Bundle">
         <h4>DJ Bundle</h4>
         <p>DJ-Setup inkl. Licht und Sound.</p>
-        <ul class="bundle-list">
-          <li>2x Hughes & Kettner Classic Line C152</li>
-          <li>2x Magnum Standard - Multifunktionsbox</li>
-          <li>the t.mix xmix 1202 FXMP USB</li>
-          <li>Aokeo Mikrofon</li>
-          <li>Stairville CLB4 RGB Compact LED Bar 4</li>
-          <li>Stairville IP Bar IR Remote</li>
-          <li>Stageworx BLS-315 Pro Lighting Stand B</li>
-          <li>Mixars Primo - 4 Kanal DJ Controller</li>
-          <li>Accu Stand Pro Event Table 2 DJ Tisch</li>
-          <li>Millenium Laptopstand White</li>
-        </ul>
+        <button class="dropdown-toggle" aria-expanded="false" aria-controls="dj-bundle-details-index">Details anzeigen <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content" id="dj-bundle-details-index">
+          <ul class="bundle-list">
+            <li>2x Hughes & Kettner Classic Line C152</li>
+            <li>2x Magnum Standard - Multifunktionsbox</li>
+            <li>the t.mix xmix 1202 FXMP USB</li>
+            <li>Aokeo Mikrofon</li>
+            <li>Stairville CLB4 RGB Compact LED Bar 4</li>
+            <li>Stairville IP Bar IR Remote</li>
+            <li>Stageworx BLS-315 Pro Lighting Stand B</li>
+            <li>Mixars Primo - 4 Kanal DJ Controller</li>
+            <li>Accu Stand Pro Event Table 2 DJ Tisch</li>
+            <li>Millenium Laptopstand White</li>
+          </ul>
+        </div>
         <div class="card-bottom">
           <span>100 € / 24h</span>
           <a href="#anfrage" class="card-btn">Jetzt sichern</a>

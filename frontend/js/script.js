@@ -60,3 +60,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // console.log("Website geladen."); // Dieser Aufruf wurde entfernt/auskommentiert für die Produktion
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const dropdownContent = document.getElementById(toggle.getAttribute('aria-controls'));
+
+      if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('active');
+      } else {
+        dropdownContent.style.display = 'block';
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.classList.add('active');
+      }
+    });
+  });
+});
