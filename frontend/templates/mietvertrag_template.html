@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mietvertrag Veranstaltungstechnik</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      line-height: 1.5;
+      margin: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 16pt;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 13pt;
+      font-weight: bold;
+      margin-top: 25px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    p {
+      margin: 5px 0;
+    }
+    ul {
+      margin: 5px 0 15px 20px;
+    }
+    .italic {
+      font-style: italic;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .logo {
+      width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .signature {
+      margin-top: 40px;
+    }
+    .spacer {
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align:center">
+    <img src="../../frontend/assets/logo_equipped.png" class="logo" alt="Equipped! Eventtechnik Logo">
+  </div>
+
+  <h1>Mietvertrag für Veranstaltungstechnik</h1>
+
+  <p>Dieser Mietvertrag regelt die Mietbedingungen für die im §1 aufgeführte Veranstaltungstechnik.</p>
+
+  <p class="bold">Der Mietvertrag wird geschlossen zwischen:</p>
+
+  <p class="bold">Vermieter:</p>
+  <p>Equipped! Eventtechnik<br>
+  GbR mit Arved Bröde, Aaron Bröde<br>
+  Danziger Straße 28,<br>
+  71679 Asperg<br>
+  Mobil: 0176 5608 2075<br>
+  E-Mail: hello@equipped-eventtechnik.de<br>
+  Website: www.equipped-eventtechnik.de</p>
+
+  <p class="bold">und Mieter:</p>
+  <p>{{mieter_name}}<br>
+  {{adresse}}<br>
+  Mobil: {{telefon}}<br>
+  E-Mail: {{email}}</p>
+
+  <p class="bold">Bemerkungen:</p>
+  <p>{{nachricht}}</p>
+
+  <h2>§1 Mietgegenstände</h2>
+  <p>Folgende Geräte und Zubehörteile sind Gegenstand der Vermietung:</p>
+  {{bundle_items}}
+
+  <h2>§2 Mietzeit und Übergabe</h2>
+  <p>Der Vertrag beginnt mit dem Zeitpunkt der Übergabe.</p>
+  <p>Der Vermieter bringt den Gegenstand am <strong>{{mietbeginn}}</strong> zum Mieter und holt ihn dort wieder ab.</p>
+  <p>Der vereinbarte Veranstaltungsort ist: <strong>{{adresse}}</strong></p>
+  <p>Die Rückgabe erfolgt am <strong>{{mietende}}</strong>.</p>
+  <p>Die maximale Mietzeit beträgt **{{berechnete_mietzeit}}**.</p>
+
+  <h3>2.1 Übergabeprotokoll:</h3>
+  <p>Bei der Übergabe der Mietsache wird ein detailliertes Übergabeprotokoll erstellt. Dieses enthält eine vollständige Auflistung aller Mietgegenstände mit einer Beschreibung ihres Zustands (z. B. neuwertig, leichte Gebrauchsspuren, Defekte). Beide Vertragspartner unterschreiben das Protokoll, das als Nachweis über den Zustand der Mietsache dient. Der Mieter hat die Möglichkeit, eigene Anmerkungen zum Zustand zu vermerken.</p>
+
+  <h3>2.2 Gefahrübergang:</h3>
+  <p>Mit Übergabe der Mietsache an den Mieter geht die Gefahr für Verlust, Beschädigung oder Diebstahl auf diesen über.</p>
+
+  <h3>2.3 Wartezeit bei Übergabe und Abholung:</h3>
+  <p>Sollte der Mieter zum vereinbarten Übergabe- oder Abholzeitpunkt nicht anwesend sein oder die Übergabe/Abholung aus Gründen, die der Mieter zu vertreten hat, nicht möglich sein, wird eine Wartezeit von 5,00 EUR pro angefangene 60 Minuten berechnet. Eine Toleranz von 15 Minuten ist selbstverständlich gegeben.</p>
+
+  <h2>§3 Kosten</h2>
+  <h3>3.1 Mietpreis und Kaution:</h3>
+  <p>Der Mieter zahlt für die Nutzung der Mietsache einen Mietpreis in Höhe von **{{berechneter_mietpreis_summe}}**, Zusätzlich wird eine Kaution in Höhe von **{{kautionssumme}}** erhoben.</p>
+
+<h3>3.2 Nebenkosten:</h3>
+<ul>
+  <li>Anfahrtskosten: Für Anfahrten innerhalb eines Umkreises von **20 km** um den Firmensitz des Vermieters (Danziger Straße 28, 71679 Asperg) fallen keine Kosten an. Für jede weitere Entfernung über diesen Freibetrag hinaus wird eine Kostenpauschale von **0,30 EUR** pro gefahrenem Kilometer (Hin- und Rückfahrt) berechnet. Die Berechnung erfolgt auf Basis der kürzesten Wegstrecke laut Online-Kartendienst. Die finale Summe wird auf der Rechnung ausgewiesen.</li>
+  <li>Verspätete Rückgabe: 50% des Mietpreises pro 12 Stunden</li>
+</ul>
+
+  <h3>3.3 Zahlungsarten:</h3>
+  <p>Die Zahlung der Mietgebühr & Kaution kann vorab oder vor Ort mit folgenden Methoden erfolgen:</p>
+  <ul>
+    <li>Bar</li>
+    <li>PayPal</li>
+    <li>Kartenzahlung</li>
+    <li>Online-Zahlungslink (Stripe)</li>
+  </ul>
+  <p>Die anfallenden Zahlungsgebühren für PayPal oder Stripe sind bereits im Mietpreis enthalten.</p>
+
+  <h3>3.4 Stornobedingungen:</h3>
+  <p>Bei einer Stornierung des Mietvertrags fallen folgende Gebühren an:</p>
+  <ul>
+    <li>Bis 14 Tage vor Mietbeginn: 20 % der Mietkosten</li>
+    <li>13 bis 7 Tage vor Mietbeginn: 40 % der Mietkosten</li>
+    <li>Weniger als 7 Tage vor Mietbeginn: 60 % der Mietkosten</li>
+  </ul>
+  <p>Die Stornierung muss schriftlich erfolgen. Der Vermieter sowie Mieter haben das Recht, den Mietvertrag bei höherer Gewalt oder unzumutbaren Wetterverhältnissen zu stornieren. In diesem Fall wird selbstverständlich keine Gebühr erhoben</p>
+
+  <h2>§4 Pflichten des Mieters</h2>
+  <p>Der Mieter verpflichtet sich, die Mietsache gemäß den folgenden Bedingungen zu nutzen und zu behandeln:</p>
+  <h3>4.1 Sorgfältiger Umgang und Nutzung:</h3>
+  <p>Der Mieter verpflichtet sich, die Mietsache pfleglich zu behandeln und vor Beschädigung, Verlust, Diebstahl und Missbrauch zu schützen. Dies beinhaltet insbesondere den Schutz vor Feuchtigkeit, Schmutz, Überhitzung und mechanischen Einwirkungen. Der Mieter ist verpflichtet, die Mietsache nur im Rahmen der vereinbarten Nutzungsart zu verwenden. Bei der Lieferung und dem Aufbau wird der Mieter in die Nutzung der Technik eingewiesen.</p>
+
+  <h3>4.2 Meldepflicht bei Schäden oder Diebstahl:</h3>
+  <p>Stellt der Mieter während der Mietdauer einen Schaden oder Verlust fest, hat er diesen unverzüglich, spätestens jedoch innerhalb von 12 Stunden, dem Vermieter zu melden. Im Falle eines Diebstahls ist der Mieter verpflichtet, unverzüglich eine polizeiliche Anzeige zu erstatten und dem Vermieter eine Kopie der Anzeige zu übermitteln.</p>
+
+  <h3>4.3 Rückgabe und Reinigung:</h3>
+  <p>Der Mieter verpflichtet sich, die Mietsache am vereinbarten Ort und Zeitpunkt in einem sauberen und voll funktionsfähigen Zustand zurückzugeben. Sollte die Technik bei der Rückgabe verschmutzt sein, ist der Mieter dazu verpflichtet, diese mit einem feuchten Tuch abzuwischen. Eine Nassreinigung ist nicht zulässig. Für eine erforderliche Nachreinigung durch den Vermieter wird eine Gebühr von 50,00 EUR berechnet.</p>
+
+  <h3>4.4 Untervermietung:</h3>
+  <p>Eine Untervermietung oder Weitergabe der Mietsache an Dritte ist ohne ausdrückliche schriftliche Zustimmung des Vermieters untersagt.</p>
+
+  <h3>4.5 Versicherung (Empfehlung):</h3>
+  <p>Der Mieter wird dringend darauf hingewiesen, dass die gemieteten Gegenstände während der Mietzeit nicht durch den Vermieter versichert sind. Gemäß §5 haftet der Mieter für alle Schäden an der Mietsache, die durch ihn oder Dritte verursacht werden, sowie für Verlust und Diebstahl der Geräte. Die Haftung des Mieters erstreckt sich insbesondere auf den Wiederbeschaffungswert der Geräte bei vollständiger Zerstörung oder Verlust. Es wird dem Mieter daher empfohlen, für die gesamte Mietdauer, einschließlich der Zeiten für Auf- und Abbau, eine geeignete Veranstaltungstechnik- oder Eventversicherung abzuschließen. Eine gewöhnliche private Haftpflichtversicherung deckt solche Schäden in der Regel nicht oder nur unzureichend ab. Der Abschluss einer solchen Versicherung liegt im alleinigen Interesse des Mieters, um sich vor den finanziellen Folgen der Haftung zu schützen.</p>
+
+  <h2>§5 Haftung des Mieters und Kaution</h2>
+
+  <h3>5.1 Haftung:</h3>
+  <p>Der Mieter haftet für alle Schäden an der Mietsache, die durch ihn, seine Erfüllungsgehilfen oder Dritte, für die er einzustehen hat, verursacht werden. Dies gilt insbesondere für Schäden durch unsachgemäße Behandlung, Überlastung, Verlust oder Diebstahl.</p>
+
+  <h3>5.2 Kaution:</h3>
+  <p>Die Kaution dient als Sicherheit für die Erfüllung der Pflichten des Mieters aus diesem Vertrag.</p>
+  <p class="bold">Schadensersatz:</p>
+  <p>Bei Beschädigung der Mietsache haftet der Mieter für die Reparaturkosten. Bei Verlust oder vollständiger Zerstörung haftet der Mieter in Höhe des Wiederbeschaffungswerts der Geräte. Der Vermieter kann einen angemessenen Betrag zur Deckung des Schadens von der Kaution einbehalten. Sollten die Schadenskosten den Kautionsbetrag übersteigen, ist der Mieter verpflichtet, die restlichen Kosten zu begleichen.</p>
+  <p class="bold">Verlust von Zubehör:</p>
+  <p>Bei Verlust von Zubehör (z. B. Kabel, Adapter) haftet der Mieter für den Wiederbeschaffungswert.</p>
+  <p class="bold">Rückzahlung der Kaution:</p>
+  <p>Die Kaution wird nach Beendigung des Mietverhältnisses und nach Abzug aller berechtigten Forderungen des Vermieters zurückerstattet. Eine Abrechnung erfolgt schriftlich innerhalb von 14 Tagen nach Rückgabe der Mietsache.</p>
+
+  <h2>§6 Haftung des Vermieters</h2>
+  <p>Der Vermieter haftet nur für Schäden, die auf einem vorsätzlichen oder grob fahrlässigen Verhalten seinerseits oder seiner Erfüllungsgehilfen beruhen. Die Haftung des Vermieters für Sachschäden, die nicht auf Vorsatz oder grober Fahrlässigkeit beruhen, ist auf den doppelten Wert der Gesamtmiete beschränkt.</p>
+
+  <h3>6.1 Höhere Gewalt:</h3>
+  <p>Wird die Vertragserfüllung durch höhere Gewalt (z. B. Naturkatastrophen, Krieg, behördliche Maßnahmen) unmöglich, sind beide Vertragspartner von ihren Verpflichtungen befreit. Die Mietsache muss jedoch so weit wie möglich vor Naturgewalten wie Sturm, Regen und Blitzschlag geschützt werden. Werden Geräte durch Fahrlässigkeit des Mieters Naturgewalten ausgesetzt, fällt dies nicht unter diese Klausel.</p>
+
+  <h2>§6 Haftung des Vermieters</h2>
+  <p>Der Vermieter haftet nur für Schäden, die auf einem vorsätzlichen oder grob fahrlässigen Verhalten seinerseits oder seiner Erfüllungsgehilfen beruhen. Die Haftung des Vermieters für Sachschäden, die nicht auf Vorsatz oder grober Fahrlässigkeit beruhen, ist auf den doppelten Wert der Gesamtmiete beschränkt.</p>
+
+  <h3>6.1 Höhere Gewalt:</h3>
+  <p>Wird die Vertragserfüllung durch höhere Gewalt (z. B. Naturkatastrophen, Krieg, behördliche Maßnahmen) unmöglich, sind beide Vertragspartner von ihren Verpflichtungen befreit. Die Mietsache muss jedoch so weit wie möglich vor Naturgewalten wie Sturm, Regen und Blitzschlag geschützt werden. Werden Geräte durch Fahrlässigkeit des Mieters Naturgewalten ausgesetzt, fällt dies nicht unter diese Klausel.</p>
+
+  <h2>§7 Gewährleistung</h2>
+<p>Der Vermieter gewährleistet, dass die Mietsache bei Übergabe dem vertraglich vereinbarten Zustand entspricht und für den vorgesehenen Gebrauch geeignet ist. Offensichtliche Mängel sind vom Mieter unverzüglich, spätestens jedoch innerhalb von 6 Stunden nach Übergabe schriftlich anzuzeigen. Bei rechtzeitig gemeldeten Mängeln wird der Vermieter nach seiner Wahl nachbessern oder Ersatz liefern. Mängelansprüche verjähren innerhalb eines Jahres ab Übergabe der Mietsache.</p>
+
+  <h2>§8 Datenschutz</h2>
+<p>Der Mieter erklärt sich damit einverstanden, dass seine personenbezogenen Daten (Name, Adresse, Telefonnummer, E-Mail-Adresse) zur Abwicklung des Mietvertrags erhoben, verarbeitet und genutzt werden. Die Daten werden vertraulich 
+  behandelt und nicht an Dritte weitergegeben, es sei denn, dies ist zur Vertragserfüllung erforderlich oder gesetzlich vorgeschrieben. Weitere Informationen zum Datenschutz sind unter https://equipped-eventtechnik.de/datenschutzerklaerung zu finden.</p>
+<h2>§9 Schlussbestimmungen</h2>
+
+<h3>9.1 Gerichtsstand:</h3>
+<p>Für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag wird als ausschließlicher Gerichtsstand Ludwigsburg, Deutschland, vereinbart.</p>
+
+<h3>9.2 Salvatorische Klausel:</h3>
+<p>Sollte eine Bestimmung dieses Vertrages unwirksam sein oder werden, so wird die Wirksamkeit der übrigen Bestimmungen hiervon nicht berührt. An die Stelle der unwirksamen Bestimmung tritt eine solche, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.</p>
+
+<p>Mit der Unterschrift bestätigen Mieter und Vermieter, dass sie den Mietvertrag zur Kenntnis genommen haben und mit dessen Inhalt einverstanden sind.</p>
+
+<div class="signature">
+    <p>Datum, Ort: {{datum_ort}}</p>
+    <p>Unterschrift Mieter</p>
+
+    <div class="spacer"></div>
+
+    <p>Asperg, den {{erstell_datum}}</p>
+    <p>Unterschrift Vermieter</p>
+  </div>
+</body>
+</html>

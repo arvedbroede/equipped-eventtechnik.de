@@ -11,19 +11,3 @@ toggleStickyCta();window.addEventListener("resize",toggleStickyCta)});const styl
       scrollbar-width: none;     /* für Firefox */
     }
   `;document.head.appendChild(style)
-
-
-  document.addEventListener("DOMContentLoaded", () => {
-  const toggleButtons = document.querySelectorAll(".details-button");
-
-  toggleButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const listContainer = button.nextElementSibling; // Das direkt folgende Element nach dem Button ist der Container
-      
-      // Toggle der 'show' Klasse für den Container
-      listContainer.classList.toggle("show");
-      // Toggle der 'active' Klasse für den Button (für Icon-Drehung)
-      button.classList.toggle("active");
-    });
-  });
-});

@@ -1,27 +1,20 @@
-.mobile-nav a,
-header nav a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
+/* Globale Resets und Basiseinstellungen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.btn,
-.burger,
-.close-btn {
-  cursor: pointer;
-}
-
-.site-footer,
 body {
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0c27;
+  color: #fff;
+  line-height: 1.6;
 }
 
-.footer-column ul,
-.mobile-nav ul,
-header nav ul {
-  list-style: none;
-}
-
+/* Allgemeine Textzentrierung für Sektionen mit flexiblen Inhalten */
+/* Diese Regel zentriert text-basierte Inhalte. Für Block-Elemente, die nicht volle Breite einnehmen,
+   ist oft Flexbox oder margin: auto auf dem Element selbst besser. */
 .about,
 .anfrage,
 .bundles-preview,
@@ -32,24 +25,41 @@ header nav ul {
   text-align: center;
 }
 
-* {
-  margin: 0;
+/* Gemeinsame Link-Stile für Navigationen */
+.mobile-nav a,
+header nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Allgemeine Cursor-Einstellung für interaktive Elemente */
+.btn,
+.burger,
+.close-btn {
+  cursor: pointer;
+}
+
+/* Liste ohne Punkte für Navigationen und Footer */
+.footer-column ul,
+.mobile-nav ul,
+header nav ul,
+.card .bundle-list {
+  list-style: none;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  background-color: #0a0c27;
-  color: #fff;
-  line-height: 1.6;
-}
-
+/* Container Basis-Stile - zentriert den Container selbst auf der Seite */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  /* text-align: center; wird hier nicht global gesetzt, um Konflikte zu vermeiden.
+     Stattdessen wird es selektiv dort angewendet, wo es nötig ist (z.B. .hero .container).
+     Für Block-Elemente im Container nutzen wir Flexbox. */
 }
 
+/* Header */
 header {
   background-color: #fff;
   position: sticky;
@@ -58,6 +68,7 @@ header {
   width: 100%;
 }
 
+/* Flexbox für den Header-Container zur Anordnung von Logo und Navigation */
 header .container {
   display: flex;
   justify-content: space-between;
@@ -71,11 +82,6 @@ header .container {
   align-items: center;
 }
 
-.burger,
-.mobile-nav {
-  flex-direction: column;
-}
-
 .logo {
   height: 50px;
   width: auto;
@@ -83,19 +89,14 @@ header .container {
   object-fit: contain;
 }
 
+/* Burger Icon & Mobile Navigation */
 .burger {
-  display: none;
+  display: none; /* Standardmäßig ausgeblendet auf größeren Bildschirmen */
   justify-content: space-between;
   width: 24px;
   height: 18px;
   z-index: 1001;
-}
-
-.mobile-nav,
-.mobile-nav ul,
-header nav ul {
-  display: flex;
-  gap: 20px;
+  flex-direction: column;
 }
 
 .burger span {
@@ -107,6 +108,9 @@ header nav ul {
 }
 
 .mobile-nav {
+  display: flex; /* Standardanzeige für mobile Nav */
+  flex-direction: column;
+  gap: 20px;
   position: fixed;
   top: 0;
   right: -100%;
@@ -119,17 +123,12 @@ header nav ul {
   z-index: 1000;
 }
 
-.card,
-.mobile-nav ul {
-  flex-direction: column;
+.mobile-nav.open {
+  right: 0;
 }
 
 .mobile-nav a {
   font-size: 1.1rem;
-}
-
-.mobile-nav.open {
-  right: 0;
 }
 
 .close-btn {
@@ -156,6 +155,7 @@ header nav ul {
   visibility: visible;
 }
 
+/* Header Navigation (Desktop) */
 header nav a {
   position: relative;
   transition: color 0.3s;
@@ -176,33 +176,7 @@ header nav a:hover::after {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  body.menu-open .burger,
-  header nav ul {
-    display: none;
-  }
-
-  .burger {
-    display: flex;
-  }
-
-  .mobile-nav.open ~ .burger {
-    display: none !important;
-  }
-}
-
-@media (min-width: 769px) {
-  header nav ul {
-    display: flex !important;
-  }
-
-  .burger,
-  .mobile-nav,
-  .mobile-overlay {
-    display: none !important;
-  }
-}
-
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -225,11 +199,14 @@ header nav a:hover::after {
   filter: brightness(0.5);
 }
 
+/* Zentriert den Inhalt des Hero-Containers */
 .hero .container {
   position: relative;
   z-index: 1;
+  text-align: center; /* Hier beibehalten, um den Text und den Button im Hero zu zentrieren */
 }
 
+/* Wenn .hero::after ein Overlay sein soll, braucht es eine background-color */
 .hero::after {
   content: "";
   position: absolute;
@@ -238,6 +215,7 @@ header nav a:hover::after {
   width: 100%;
   height: 100%;
   z-index: 0;
+  /* background: rgba(0, 0, 0, 0.3); /* Beispiel für ein Overlay */
 }
 
 .hero h2 {
@@ -251,12 +229,14 @@ header nav a:hover::after {
   margin: 0 auto 30px;
 }
 
+/* Buttons */
 .btn,
 .btn-small {
   color: #0a0c27;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
+  border: none;
 }
 
 .btn {
@@ -264,14 +244,29 @@ header nav a:hover::after {
   padding: 14px 28px;
   border-radius: 12px;
   transition: background 0.3s;
-  border: none;
 }
 
+.btn-small {
+  background: #00ffc2;
+  padding: 10px 24px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+/* Hover-Effekte für Buttons */
 .btn:hover,
 .card-btn:hover {
   background: #85e5f8;
 }
 
+.anfrage-form .btn:hover,
+.btn-small:hover {
+  background: #85e5f8; /* Duplizierung des Hintergrunds für Übersichtlichkeit beibehalten */
+  transform: translateY(-2px);
+}
+
+/* About Section */
 .about {
   background: #000;
   padding: 80px 20px;
@@ -291,20 +286,7 @@ header nav a:hover::after {
   font-size: 1.05rem;
 }
 
-.btn-small {
-  background: #00ffc2;
-  padding: 10px 24px;
-  border-radius: 10px;
-  transition: 0.2s ease-in-out;
-  margin-top: 10px;
-}
-
-.anfrage-form .btn:hover,
-.btn-small:hover {
-  background: #85e5f8;
-  transform: translateY(-2px);
-}
-
+/* Bundles Preview Section */
 .bundles-preview {
   background-color: #0a0c27;
   padding: 80px 20px;
@@ -315,11 +297,6 @@ header nav a:hover::after {
   margin-bottom: 40px;
   font-weight: 800;
   color: #fff;
-}
-
-.card h4,
-.footer-column ul li {
-  margin-bottom: 8px;
 }
 
 .bundle-cards {
@@ -333,17 +310,17 @@ header nav a:hover::after {
   align-items: stretch;
 }
 
+/* Card Styles */
 .card {
   background-color: #fff;
   padding: 25px 20px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
   display: flex;
-  flex-direction: column; /* Ermöglicht vertikale Anordnung der Elemente */
-  align-items: center; /* Zentriert horizontal */
+  align-items: center;
+  flex-direction: column;
   transition: transform 0.25s, box-shadow 0.25s;
   height: 100%;
-  text-align: center; /* Zentriert den Titel und Preis */
 }
 
 .card:hover {
@@ -365,7 +342,7 @@ header nav a:hover::after {
   font-size: 1.3rem;
   font-weight: 700;
   color: #0a0c27;
-  margin-bottom: 0; /* Entfernt den Standard-Margin, um Abstand zum Button zu steuern */
+  margin-bottom: 8px;
 }
 
 .card p {
@@ -375,13 +352,30 @@ header nav a:hover::after {
   padding: 0 10px;
 }
 
+.card .bundle-list {
+  list-style-type: none;
+  margin: 10px 0 0;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+}
+
+.card .bundle-list li {
+  list-style-type: none;
+  font-size: 0.95rem;
+  color: #0a0c27;
+  padding-left: 20px;
+  margin-bottom: 6px;
+  position: relative;
+}
+
 .card-bottom {
-  margin-top: auto; /* Plaziert den Button am unteren Rand der Karte */
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding-top: 20px; /* Abstand vom Dropdown-Bereich */
+  padding-top: 20px;
 }
 
 .card-bottom span {
@@ -400,82 +394,7 @@ header nav a:hover::after {
   transition: background 0.2s;
 }
 
-.card-btn:hover {
-  background: #85e5f8;
-}
-
-/* Dropdown Styles */
-.bundle-details-toggle {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Zentriert den Button horizontal */
-  margin-top: 10px; /* Abstand vom Preis */
-}
-
-.details-button {
-  background: none;
-  border: 1px solid #00ffc2;
-  color: #00ffc2;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  display: flex; /* Für Icon und Text */
-  align-items: center;
-  gap: 8px; /* Abstand zwischen Text und Icon */
-  width: fit-content; /* Passt die Breite an den Inhalt an */
-  margin-bottom: 0; /* Entfernt den unteren Rand des Buttons */
-}
-
-.details-button:hover {
-  background-color: #00ffc2;
-  color: #0a0c27;
-}
-
-.details-button.active .fa-chevron-down {
-  transform: rotate(180deg);
-}
-
-.bundle-list-container {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  margin-top: 10px; /* Abstand zum Button */
-  width: 100%;
-}
-
-.bundle-list-container.show {
-  max-height: 500px; /* Höhe muss groß genug für längste Liste sein. */
-  transition: max-height 0.5s ease-in;
-}
-
-.card .bundle-list {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  margin: 0 auto; /* Zentriert die Liste innerhalb des Containers */
-  max-width: 250px; /* Begrenzt die Breite der Liste */
-}
-
-.card .bundle-list li {
-  font-size: 0.9rem;
-  color: #0a0c27;
-  padding-left: 20px;
-  margin-bottom: 5px;
-  position: relative;
-}
-
-.card .bundle-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #00ffc2;
-  font-weight: 700;
-}
-
+/* Anfrage Section (Formular) */
 .anfrage {
   background: #0a0c27;
   padding: 80px 20px;
@@ -540,14 +459,9 @@ header nav a:hover::after {
   grid-column: 1 / -1;
   justify-self: center;
   margin-top: 10px;
-  padding: 14px 30px;
-  background: #00ffc2;
-  color: #0a0c27;
-  border-radius: 12px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+  padding: 14px 30px; /* Spezifisches Padding für diesen Button */
+  /* Die anderen Eigenschaften (background, color, border-radius, font-weight, border, cursor, transition)
+     werden von der allgemeinen .btn-Regel geerbt oder sind dort konsolidiert. */
 }
 
 #anfrage-danke {
@@ -561,12 +475,26 @@ header nav a:hover::after {
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
 }
 
-@media (max-width: 600px) {
-  .anfrage-form {
-    grid-template-columns: 1fr;
-  }
+/* Teaser Bundle Section - Hier ist die Zentrierung für den Inhalt! */
+.teaser-bundle {
+  padding: 80px 20px;
+  /* Hier keine direkten Zentrierungs-Eigenschaften für die Section selbst,
+     da der Inhalt im .container darin zentriert wird. */
 }
 
+/* Flexbox für den Container innerhalb der teaser-bundle Section */
+/* Dies zentriert die h2, p und den Button horizontal in der Mitte des Containers. */
+.teaser-bundle .container {
+  display: flex;
+  flex-direction: column; /* Elemente bleiben untereinander */
+  align-items: center;   /* Horizontal zentriert bei flex-direction: column */
+  /* Zusätzliche Regel, um sicherzustellen, dass text-align: center auch auf Inline-Inhalt wirkt,
+     falls dieser nicht direkt von align-items betroffen ist (z.B. reiner Textknoten). */
+  text-align: center;
+}
+
+
+/* Footer */
 .site-footer {
   background: #fff;
   color: #0a0c27;
@@ -593,9 +521,7 @@ header nav a:hover::after {
 }
 
 .footer-column ul {
-  padding: 0;
   color: #000;
-  text-decoration: none;
 }
 
 .footer-column ul li a {
@@ -606,7 +532,6 @@ header nav a:hover::after {
 }
 
 .footer-column ul li a:hover,
-.footer-column ul:hover,
 .social-icons a:hover {
   color: #00ffc2;
 }
@@ -647,6 +572,7 @@ header nav a:hover::after {
   color: #333;
 }
 
+/* Toast Success Message */
 .toast-success {
   background-color: #00ffc2;
   color: #0a0c27;
@@ -657,28 +583,7 @@ header nav a:hover::after {
   animation: 5s ease-in-out fadeInOut;
 }
 
-@keyframes fadeInOut {
-  0%,
-  100% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 1;
-  }
-}
-
-.teaser-bundle {
-  padding: 80px 20px;
-  text-align: center; /* Diese Zeile hinzufügen */
-  align-self: center;
-}
-
-/* DSGVO-Link in der Checkbox */
+/* DSGVO Checkbox Link */
 .checkbox-label a {
   color: #00ffc2;
   text-decoration: underline;
@@ -690,6 +595,7 @@ header nav a:hover::after {
   color: #0a0c27;
 }
 
+/* Sticky CTA Mobile */
 .sticky-cta-mobile {
   position: fixed;
   bottom: 20px;
@@ -711,6 +617,22 @@ header nav a:hover::after {
   font-size: 16px;
 }
 
+/* Keyframes */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
 @keyframes popIn {
   from {
     transform: translateX(-50%) translateY(20px);
@@ -719,5 +641,34 @@ header nav a:hover::after {
   to {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body.menu-open .burger,
+  header nav ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobile-nav.open ~ .burger {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  header nav ul {
+    display: flex !important;
+    gap: 20px;
+  }
+
+  .burger,
+  .mobile-nav,
+  .mobile-overlay {
+    display: none !important;
   }
 }
