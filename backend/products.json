@@ -3,25 +3,25 @@
       "id": "sony-gtk-xb72",
       "name": "Sony GTK-XB72",
       "category": "Ton",
-      "price": 15,
+      "price": 21,
       "maxQuantity": 2,
       "image": "frontend/img/products/Sony GTK-XB 72 - Trans BG.svg",
-      "description": "Leistungsstarker Partylautsprecher mit EXTRA BASS."
+      "description": "Leistungsstarker Partylautsprecher mit EXTRA BASS. Preis für 24h Miete."
     },
     {
       "id": "hk-c152",
-      "name": "Hughes & Kettner C152 Lautsprecher",
+      "name": "Hughes & Kettner Classic Line C152",
       "category": "Ton",
-      "price": 15,
+      "price": 28,
       "maxQuantity": 2,
       "image": "frontend/img/products/Hughes & Kettner - Trans BG.svg",
       "description": "Kompakter Lautsprecher für klare Klangwiedergabe."
     },
     {
       "id": "magnum-subwoofer",
-      "name": "Magnum Standard Subwoofer",
+      "name": "Magnum Standard - Multifunktionsbox",
       "category": "Ton",
-      "price": 20,
+      "price": 55,
       "maxQuantity": 2,
       "image": "frontend/img/products/Magnum Standard - Trans BG.svg",
       "description": "Sorgt für den nötigen Bass auf deiner Veranstaltung."
@@ -30,7 +30,7 @@
       "id": "mixars-primo",
       "name": "Mixars Primo DJ-Controller",
       "category": "Ton",
-      "price": 20,
+      "price": 19,
       "maxQuantity": 1,
       "image": "frontend/img/products/Mixars Primo - Trans BG.svg",
       "description": "Professioneller 2-Kanal DJ-Controller für Serato DJ Pro."
@@ -39,7 +39,7 @@
       "id": "tmix-1202",
       "name": "the t.mix xmix 1202 FXMP USB",
       "category": "Ton",
-      "price": 10,
+      "price": 12,
       "maxQuantity": 1,
       "image": "frontend/img/products/the t.mix xmix 1202 FXMP USB - Trans BG.svg",
       "description": "Kompaktes Mischpult mit Effekten und USB-Interface."
@@ -48,7 +48,7 @@
       "id": "aokeo-mikrofon",
       "name": "Aokeo Mikrofon",
       "category": "Ton",
-      "price": 5,
+      "price": 3,
       "maxQuantity": 3,
       "image": "frontend/img/products/AOKEO Professional 350 - Trans BG.svg",
       "description": "Vielseitiges Mikrofon für Sprache und Gesang."
@@ -57,7 +57,7 @@
       "id": "stairville-clb4",
       "name": "Stairville CLB4 RGB Compact LED Bar 4",
       "category": "Licht",
-      "price": 25,
+      "price": 17,
       "maxQuantity": 1,
       "image": "frontend/img/products/Stairville CLB4 RGB Compact LED Bar 4 - Trans BG.svg",
       "description": "Kompakte LED-Bar für farbenfrohe Beleuchtung."
@@ -75,7 +75,7 @@
       "id": "accu-stand-table",
       "name": "Accu Stand Pro Event Table 2",
       "category": "Zubehör",
-      "price": 10,
+      "price": 18,
       "maxQuantity": 1,
       "image": "frontend/img/products/Accu Stand Pro Event Table 2 - Trans BG.svg",
       "description": "Professioneller DJ-Tisch, klappbar."
@@ -84,7 +84,7 @@
       "id": "millenium-laptopstand",
       "name": "Millenium Laptopstand White",
       "category": "Zubehör",
-      "price": 2,
+      "price": 3,
       "maxQuantity": 1,
       "image": "frontend/img/products/Millenium Laptopstand White - Trans BG.svg",
       "description": "Praktischer Laptopständer für DJs und Musiker."
